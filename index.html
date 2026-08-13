@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     HOW TO ADD YOUR PHOTOS  (this is the only part you really edit)
+
+     1. Make a folder called  images  next to this file.
+     2. EASY WAY — name your files photo-1.jpg, photo-2.jpg, photo-3.jpg …
+        then scroll to the bottom and set  AUTO_COUNT  to how many you have.
+        Missing files are skipped automatically, so guessing high is fine.
+     3. NICER WAY — fill in the PHOTOS list at the bottom instead, and you
+        get captions and album filters (Ladakh / Mumbai / Unboxing …).
+     4. Portrait for the hero: images/portrait.jpg
+        Two collage photos: images/me-1.jpg and images/me-2.jpg
+
+     ALSO EDIT: you@example.com (2 places) · VIDEO_ID_1 / VIDEO_ID_2
+     ═══════════════════════════════════════════════════════════════════ -->
+
+<title>Skarma Yangskit — Jullay</title>
+<meta name="description" content="Skarma Yangskit — from Leh, Ladakh. Computer science at IIT Bombay, compilers in Pune, and a camera everywhere else. Travel, unboxing and everyday life.">
+<meta name="author" content="Skarma Yangskit">
+<meta property="og:title" content="Skarma Yangskit — Jullay">
+<meta property="og:description" content="Born in the Himalayas. Somehow a beach person.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23EBC9C2'/><path d='M5 23 L13 9 L18 17 L21 13 L28 23 Z' fill='%234A3A36'/></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..600;1,6..96,400..500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+/* ── palette: Ladakhi apricot blossom, perak turquoise, butter cream ── */
+:root{
+  --cream:#FCF7F2;
+  --cream-2:#F5EBE3;
+  --blush:#EBC9C2;
+  --blush-deep:#B5705F;
+  --turq:#9DC3BE;
+  --turq-deep:#4E7F7A;
+  --ink:#4A3A36;
+  --ink-soft:#8A7770;
+  --gold:#C79A3E;
+  --line:rgba(74,58,54,.14);
+  --maxw:1080px;
+  --r:14px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  margin:0;background:var(--cream);color:var(--ink);
+  font-family:"Jost",system-ui,sans-serif;font-weight:300;
+  font-size:1.05rem;line-height:1.75;-webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+a:focus-visible,button:focus-visible{outline:2px solid var(--turq-deep);outline-offset:3px;border-radius:4px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px}
+
+.serif{font-family:"Bodoni Moda",Georgia,serif;font-weight:500;line-height:1.04;letter-spacing:-.01em;margin:0}
+.tiny{font-family:"Jost",sans-serif;font-weight:400;font-size:.68rem;letter-spacing:.28em;text-transform:uppercase}
+
+/* ── nav ── */
+nav{position:sticky;top:0;z-index:30;background:rgba(252,247,242,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{max-width:var(--maxw);margin:0 auto;padding:15px 26px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.mark{font-family:"Bodoni Moda",serif;font-style:italic;font-weight:500;font-size:1.15rem;text-decoration:none}
+.nav-links{display:flex;gap:20px}
+.nav-links a{text-decoration:none;color:var(--ink-soft);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;font-weight:400}
+.nav-links a:hover{color:var(--blush-deep)}
+@media (max-width:600px){.nav-links{gap:14px}.nav-links a{letter-spacing:.12em;font-size:.62rem}}
+
+/* ── hero ── */
+header{padding:clamp(40px,7vw,74px) 0 0}
+.hero{display:grid;gap:clamp(30px,5vw,54px);grid-template-columns:1fr;align-items:center}
+.hero .eyebrow{color:var(--turq-deep);margin:0 0 22px}
+h1{font-size:clamp(3.4rem,13vw,6.6rem);font-weight:400}
+h1 i{font-style:italic;font-weight:400}
+.namebar{display:flex;align-items:center;gap:14px;margin:22px 0 0}
+.namebar span{font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;font-weight:400;white-space:nowrap}
+.namebar::after{content:"";height:1px;background:var(--line);flex:1}
+.tagline{font-family:"Bodoni Moda",serif;font-style:italic;font-weight:400;font-size:clamp(1.2rem,3.6vw,1.6rem);line-height:1.35;margin:24px 0 0;max-width:20em;color:var(--blush-deep);position:relative;display:inline-block}
+.swoosh{display:block;width:min(260px,70%);margin:2px 0 0;color:var(--blush)}
+.swoosh path{fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin:32px 0 0}
+.btn{display:inline-block;text-decoration:none;padding:12px 24px;border-radius:999px;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;font-weight:400;transition:transform .2s,background .2s,color .2s}
+.btn-fill{background:var(--ink);color:var(--cream)}
+.btn-fill:hover{background:var(--blush-deep);transform:translateY(-2px)}
+.btn-line{border:1px solid var(--line)}
+.btn-line:hover{background:var(--cream-2);transform:translateY(-2px)}
+
+/* arch portrait */
+.arch-wrap{position:relative;padding:12px 12px 0 0}
+.arch{position:relative;aspect-ratio:3/4;border-radius:999px 999px var(--r) var(--r);overflow:hidden;background:linear-gradient(165deg,var(--blush),var(--turq));z-index:1}
+.arch img{width:100%;height:100%;object-fit:cover}
+.arch-wrap::before{content:"";position:absolute;inset:0 0 -12px 12px;border:1px solid var(--blush);border-radius:999px 999px var(--r) var(--r)}
+.arch-note{position:absolute;right:-6px;bottom:-14px;z-index:2;background:var(--cream);padding:6px 12px;border-radius:999px;border:1px solid var(--line);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft)}
+
+/* ── marquee ── */
+.marquee{margin:clamp(46px,8vw,80px) 0 0;padding:16px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--cream-2);overflow:hidden}
+.mq-track{display:flex;gap:0;width:max-content;animation:slide 34s linear infinite}
+.marquee:hover .mq-track{animation-play-state:paused}
+.mq-track span{font-family:"Bodoni Moda",serif;font-style:italic;font-size:1.05rem;padding:0 22px;color:var(--ink-soft);white-space:nowrap}
+.mq-track span::after{content:"✦";margin-left:22px;font-style:normal;font-size:.6rem;color:var(--blush-deep);vertical-align:middle}
+@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ── bands ── */
+.band{padding:clamp(52px,9vw,90px) 0}
+.band-tint{background:var(--cream-2)}
+.kicker{color:var(--turq-deep);margin:0 0 20px}
+h2{font-family:"Bodoni Moda",serif;font-weight:400;font-size:clamp(1.85rem,5.6vw,3rem);line-height:1.1;margin:0 0 20px}
+h2 i{font-style:italic}
+.band p{max-width:33em}
+.band p+p{margin-top:1.05em}
+.soft{color:var(--ink-soft)}
+
+/* ── about + collage ── */
+.about{display:grid;gap:clamp(30px,5vw,56px);grid-template-columns:1fr;align-items:center}
+.collage{position:relative;padding:16px 0 34px}
+.tape{position:relative;border-radius:6px;overflow:hidden;background:var(--blush);box-shadow:0 10px 30px rgba(74,58,54,.13);aspect-ratio:4/5}
+.tape img{width:100%;height:100%;object-fit:cover}
+.tape-1{transform:rotate(-3deg);width:72%}
+.tape-2{transform:rotate(4deg);width:56%;position:absolute;right:0;bottom:0;background:var(--turq)}
+.stamp{position:absolute;left:58%;top:-2px;font-family:"Bodoni Moda",serif;font-style:italic;font-size:.85rem;color:var(--blush-deep);transform:rotate(-8deg)}
+
+/* ── two lives ── */
+.duo{display:grid;gap:16px;grid-template-columns:1fr}
+.card{background:var(--cream);border:1px solid var(--line);border-radius:var(--r);padding:28px 26px}
+.band-tint .card{background:var(--cream)}
+.card h3{font-family:"Bodoni Moda",serif;font-weight:500;font-size:1.45rem;margin:0 0 10px}
+.card p{margin:0;font-size:1rem}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin:20px 0 0;padding:0;list-style:none}
+.chips li{font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;font-weight:400;padding:6px 11px;border-radius:999px;background:var(--cream-2);color:var(--ink-soft)}
+.card:first-child h3{color:var(--turq-deep)}
+.card:last-child h3{color:var(--blush-deep)}
+
+/* ── divider doodle ── */
+.divider{max-width:var(--maxw);margin:0 auto;padding:0 26px}
+.divider svg{width:100%;height:auto;color:var(--blush)}
+.divider path{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+/* ── gallery ── */
+.gal-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:18px;margin:0 0 26px}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.filters button{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;padding:8px 15px;border-radius:999px;border:1px solid var(--line);color:var(--ink-soft);transition:all .2s}
+.filters button:hover{border-color:var(--blush-deep);color:var(--ink)}
+.filters button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--cream)}
+.grid{columns:2;column-gap:12px}
+.cell{break-inside:avoid;margin:0 0 12px;padding:0;position:relative;border-radius:var(--r);overflow:hidden;background:var(--cream-2);cursor:zoom-in;display:block;width:100%}
+.cell img{width:100%;height:auto;transition:transform .5s ease,opacity .4s ease}
+.cell:hover img{transform:scale(1.045)}
+.cell figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 14px 11px;font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:#fff;background:linear-gradient(transparent,rgba(74,58,54,.66));opacity:0;transition:opacity .3s}
+.cell:hover figcaption,.cell:focus-visible figcaption{opacity:1}
+.gal-empty{border:1px dashed var(--line);border-radius:var(--r);padding:40px 26px;text-align:center;color:var(--ink-soft);max-width:none}
+.gal-empty code{font-family:ui-monospace,monospace;font-size:.85em;background:var(--cream-2);padding:2px 6px;border-radius:4px}
+
+/* ── lightbox ── */
+.lb{position:fixed;inset:0;z-index:60;background:rgba(60,46,42,.94);display:none;align-items:center;justify-content:center;padding:20px}
+.lb.on{display:flex}
+.lb img{max-width:min(1100px,94vw);max-height:82vh;object-fit:contain;border-radius:8px}
+.lb-cap{position:absolute;left:0;right:0;bottom:22px;text-align:center;color:rgba(252,247,242,.85);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase}
+.lb-btn{position:absolute;top:50%;transform:translateY(-50%);width:46px;height:46px;border-radius:999px;background:rgba(252,247,242,.14);color:#FCF7F2;font-size:1.1rem;line-height:1}
+.lb-prev{left:14px}.lb-next{right:14px}
+.lb-close{position:absolute;top:14px;right:14px;width:42px;height:42px;border-radius:999px;background:rgba(252,247,242,.14);color:#FCF7F2;font-size:1rem}
+.lb-btn:hover,.lb-close:hover{background:rgba(252,247,242,.3)}
+body.locked{overflow:hidden}
+
+/* ── watch ── */
+.handles{display:grid;gap:12px;grid-template-columns:1fr;margin:0 0 26px;padding:0;list-style:none}
+.handle{display:flex;align-items:baseline;justify-content:space-between;gap:14px;text-decoration:none;padding:22px;border:1px solid var(--line);border-radius:var(--r);background:var(--cream);transition:all .22s}
+.handle:hover{border-color:var(--blush);transform:translateY(-3px);box-shadow:0 12px 26px rgba(74,58,54,.09)}
+.handle b{font-family:"Bodoni Moda",serif;font-weight:500;font-size:1.3rem}
+.handle span{font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:var(--blush-deep);white-space:nowrap}
+.embeds{display:grid;gap:14px;grid-template-columns:1fr}
+.frame{position:relative;padding-top:56.25%;border-radius:var(--r);overflow:hidden;background:var(--cream-2)}
+.frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+/* ── route ── */
+.route{list-style:none;margin:0;padding:0}
+.leg{display:grid;grid-template-columns:1fr;gap:2px;padding:20px 0;border-bottom:1px solid var(--line)}
+.leg:first-child{border-top:1px solid var(--line)}
+.leg .when{font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--turq-deep);font-weight:400}
+.leg h3{font-family:"Bodoni Moda",serif;font-weight:500;font-size:1.1rem;margin:0}
+.leg p{margin:0;font-size:.97rem;color:var(--ink-soft)}
+.wins{display:flex;flex-wrap:wrap;gap:8px;margin:26px 0 0;padding:0;list-style:none}
+.wins li{font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;padding:7px 12px;border-radius:999px;border:1px solid var(--blush);color:var(--ink)}
+
+/* ── contact ── */
+.mail{font-family:"Bodoni Moda",serif;font-style:italic;font-weight:500;font-size:clamp(1.4rem,5.4vw,2.4rem);text-decoration:none;color:var(--blush-deep);border-bottom:1px solid var(--blush);display:inline-block;line-height:1.25;word-break:break-all}
+.mail:hover{border-bottom-color:var(--blush-deep)}
+.elsewhere{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0 0;padding:0;list-style:none}
+.elsewhere a{display:inline-block;text-decoration:none;padding:9px 16px;border-radius:999px;border:1px solid var(--line);font-size:.64rem;letter-spacing:.16em;text-transform:uppercase}
+.elsewhere a:hover{background:var(--ink);color:var(--cream);border-color:var(--ink)}
+
+footer{border-top:1px solid var(--line);padding:36px 0 48px;text-align:center}
+.doodle{width:78px;margin:0 auto 12px;color:var(--blush)}
+.doodle path,.doodle circle{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+footer .bye{font-family:"Bodoni Moda",serif;font-style:italic;font-size:1.5rem;margin:0 0 8px;color:var(--blush-deep)}
+footer p.tiny{margin:0;color:var(--ink-soft)}
+
+.rise{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
+.rise.in{opacity:1;transform:none}
+
+@media (min-width:760px){
+  .hero{grid-template-columns:1.25fr .75fr}
+  .about{grid-template-columns:.9fr 1.1fr}
+  .duo{grid-template-columns:1fr 1fr}
+  .grid{columns:3;column-gap:14px}
+  .cell{margin-bottom:14px}
+  .handles,.embeds{grid-template-columns:1fr 1fr}
+  .leg{grid-template-columns:190px 1fr;gap:4px 26px}
+  .leg h3,.leg p{grid-column:2}
+  .leg .when{padding-top:.35em}
+}
+@media (min-width:1080px){.grid{columns:3}}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{animation:none!important;transition:none!important}
+  .rise{opacity:1;transform:none}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="nav-in">
+    <a class="mark" href="#top">Skarma</a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#photos">Photos</a>
+      <a href="#watch">Watch</a>
+      <a href="#hi">Say hi</a>
+    </div>
+  </div>
+</nav>
+
+<header id="top">
+  <div class="wrap">
+    <div class="hero">
+      <div>
+        <p class="tiny eyebrow">Leh, Ladakh · 34.16° N · 3,500 m</p>
+        <h1 class="serif">Jullay, <i>hi.</i></h1>
+        <div class="namebar"><span>Skarma Yangskit</span></div>
+        <p class="tagline">Born in the Himalayas.<br>Somehow a beach person.</p>
+        <svg class="swoosh" viewBox="0 0 260 12" aria-hidden="true"><path d="M3,8 C46,2 74,10 112,6 C150,2 186,9 224,4 C240,2 250,5 257,7"/></svg>
+        <div class="cta">
+          <a class="btn btn-fill" href="#photos">See the photos</a>
+          <a class="btn btn-line" href="#about">More about me</a>
+        </div>
+      </div>
+      <div class="arch-wrap">
+        <div class="arch"><img src="images/sk3.JPG" alt="Skarma Yangskit"></div>
+        <span class="arch-note">Leh → Pune</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="mq-track">
+      <span>travel</span><span>unboxing</span><span>ladakh</span><span>everyday life</span><span>compilers</span><span>jullay</span>
+      <span>travel</span><span>unboxing</span><span>ladakh</span><span>everyday life</span><span>compilers</span><span>jullay</span>
+    </div>
+  </div>
+</header>
+
+<section class="band rise" id="about">
+  <div class="wrap">
+    <div class="about">
+      <div class="collage">
+        <figure class="tape tape-1"><img src="images/sk1.jpg" alt=""></figure>
+        <figure class="tape tape-2"><img src="images/sk2.HEIC" alt=""></figure>
+        <span class="stamp">hi there!</span>
+      </div>
+      <div>
+        <p class="tiny kicker">A little about me</p>
+        <h2>A computer science girl from the <i>land of high passes</i></h2>
+        <p>
+          I grew up in Leh and went to school there, then left the mountains for a
+          B.Tech in Bareilly and an M.Tech in computer science at IIT Bombay. These
+          days I work on compilers in Pune — the software that turns the code people
+          write into something a processor can actually run.
+        </p>
+        <p class="soft">
+          The parts of computing I keep coming back to are cryptography and machine
+          learning. The rest of my time goes to travelling, filming it, and putting
+          it here. I'm from the highest mountains in the country and I still can't
+          say no to a beach.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider" aria-hidden="true">
+  <svg viewBox="0 0 1000 40"><path d="M4,30 L60,12 L92,24 L150,4 L196,26 L228,14 L272,30 L330,32 Q366,20 402,32 Q438,44 474,32 Q510,20 546,32 Q582,44 618,32 Q654,20 690,32 Q726,44 762,32 Q798,20 834,32 Q870,44 906,32 Q942,20 996,30"/></svg>
+</div>
+
+<section class="band band-tint rise">
+  <div class="wrap">
+    <p class="tiny kicker">Two lives</p>
+    <div class="duo">
+      <div class="card">
+        <h3>Code</h3>
+        <p>Compiler engineer at Quadric in Pune. Before that, M.Tech at IIT Bombay and a stint as a teaching assistant. I like problems where the answer has to be provably right, not roughly right.</p>
+        <ul class="chips"><li>C++</li><li>Python</li><li>JavaScript</li><li>Cryptography</li><li>Machine learning</li><li>OS</li><li>DBMS</li><li>Networks</li></ul>
+      </div>
+      <div class="card">
+        <h3>Camera</h3>
+        <p>Unboxings of things I actually bought, travel that mostly ends up back in Ladakh, and the ordinary week in between. I'd rather tell you something is a waste of money than pretend otherwise.</p>
+        <ul class="chips"><li>Unboxing</li><li>Travel</li><li>Lifestyle</li><li>Vlogs</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band rise" id="photos">
+  <div class="wrap">
+    <div class="gal-head">
+      <div>
+        <p class="tiny kicker">The camera roll</p>
+        <h2 style="margin:0">Mostly mountains, <i>occasionally a beach</i></h2>
+      </div>
+      <ul class="filters" id="filters"></ul>
+    </div>
+    <div class="grid" id="grid"></div>
+    <div class="gal-empty" id="galEmpty" hidden>
+      <p style="max-width:38em;margin:0 auto">
+        No photos found yet. Put your images in a folder called <code>images</code>
+        next to this file, name them <code>photo-1.jpg</code>, <code>photo-2.jpg</code>…
+        and set <code>AUTO_COUNT</code> at the bottom of this file to how many you have.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="band band-tint rise" id="watch">
+  <div class="wrap">
+    <p class="tiny kicker">On the internet</p>
+    <h2>Come say <i>jullay</i> there too</h2>
+    <ul class="handles">
+      <li><a class="handle" href="https://www.youtube.com/@skaryang" target="_blank" rel="noopener"><b>@skaryang</b><span>YouTube →</span></a></li>
+      <li><a class="handle" href="https://www.instagram.com/skarma_verse/" target="_blank" rel="noopener"><b>@skarma_verse</b><span>Instagram →</span></a></li>
+    </ul>
+    <div class="embeds">
+      <div class="frame"><iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID_1" title="Featured video" loading="lazy" allowfullscreen allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe></div>
+      <div class="frame"><iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID_2" title="Featured video" loading="lazy" allowfullscreen allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe></div>
+    </div>
+  </div>
+</section>
+
+<section class="band rise">
+  <div class="wrap">
+    <p class="tiny kicker">The route so far</p>
+    <h2>Leh → Bareilly → Powai → <i>Pune</i></h2>
+    <ul class="route">
+      <li class="leg">
+        <div class="when">2019 · Leh</div>
+        <h3>GGHSS Leh</h3>
+        <p>Higher secondary, at 3,500 metres.</p>
+      </li>
+      <li class="leg">
+        <div class="when">2020 – 2024 · Bareilly</div>
+        <h3>B.Tech, Computer Science &amp; IT — IET, MJPRU</h3>
+        <p>8.1 CPI. Where the first real code got written.</p>
+      </li>
+      <li class="leg">
+        <div class="when">2024 – 2026 · Mumbai</div>
+        <h3>M.Tech, Computer Science — IIT Bombay</h3>
+        <p>Cryptography, security and systems. Teaching assistant along the way.</p>
+      </li>
+      <li class="leg">
+        <div class="when">2026 – now · Pune</div>
+        <h3>Compiler Engineer — Quadric</h3>
+        <p>Working on the toolchain for an AI processor.</p>
+      </li>
+    </ul>
+    <ul class="wins">
+      <li>GATE 2024 qualified</li>
+      <li>1st — Codezen webathon</li>
+      <li>1st — Women in Data Science</li>
+      <li>Omdena Ladakh chapter</li>
+    </ul>
+  </div>
+</section>
+
+<section class="band band-tint rise" id="hi">
+  <div class="wrap">
+    <p class="tiny kicker">Say hi</p>
+    <h2>Collaborations, compiler talk, or <i>Ladakh trip questions</i></h2>
+    <p class="soft">Brands and everything else — email reaches me fastest.</p>
+    <p><a class="mail" href="mailto:you@example.com">you@example.com</a></p>
+    <ul class="elsewhere">
+      <li><a href="https://www.instagram.com/skarma_verse/" target="_blank" rel="noopener">Instagram</a></li>
+      <li><a href="https://www.youtube.com/@skaryang" target="_blank" rel="noopener">YouTube</a></li>
+      <li><a href="https://www.linkedin.com/in/skarma-yangskit/" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="https://github.com/skarmamjpru" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a href="mailto:you@example.com">Email</a></li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <svg class="doodle" viewBox="0 0 90 40" aria-hidden="true">
+      <path d="M4,34 L26,8 L38,22 L48,12 L86,34"/><circle cx="66" cy="11" r="6"/>
+    </svg>
+    <p class="bye">Jullay</p>
+    <p class="tiny">© <span id="yr">2026</span> Skarma Yangskit · Leh &amp; Pune</p>
+  </div>
+</footer>
+
+<!-- lightbox -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="lb-close" id="lbClose" aria-label="Close">✕</button>
+  <button class="lb-btn lb-prev" id="lbPrev" aria-label="Previous photo">‹</button>
+  <img id="lbImg" alt="">
+  <button class="lb-btn lb-next" id="lbNext" aria-label="Next photo">›</button>
+  <p class="lb-cap" id="lbCap"></p>
+</div>
+
+<script>
+/* ══════════════════════════════════════════════════════════════
+   ▼▼▼  YOUR PHOTOS GO HERE  ▼▼▼
+   ══════════════════════════════════════════════════════════════ */
+
+/* OPTION A — bulk. Name files images/photo-1.jpg, photo-2.jpg …
+   and just say how many. Set to 0 if you use Option B instead. */
+var AUTO_COUNT = 24;
+var AUTO_PATTERN = "images/photo-{n}.jpg";   // .png / .webp also fine
+
+/* OPTION B — captions + album filters. Anything you add here is
+   shown before the bulk photos. Album names become the filter chips. */
+var PHOTOS = [
+   { src:"images/buddha.jpg",  album:"Ladakh",   caption:"108 Buddha" },
+  { src:"images/hemis.jpg", album:"Ladakh",   caption:"Hemis" },
+  { src:"images/powai.jpg",    album:"Mumbai",   caption:"Powai lake" },
+  { src:"images/sk13.jpg",     album:"Pune", caption:"Tamini Ghat" },
+];
+
+/* ══════════════════════════════════════════════════════════════ */
+
+(function () {
+  var list = PHOTOS.slice();
+  for (var i = 1; i <= AUTO_COUNT; i++) {
+    list.push({ src: AUTO_PATTERN.replace("{n}", i), album: "", caption: "" });
+  }
+
+  var grid = document.getElementById('grid');
+  var live = [];   // only photos that actually loaded
+
+  list.forEach(function (p, idx) {
+    var fig = document.createElement('figure');
+    fig.className = 'cell';
+    fig.tabIndex = 0;
+    fig.setAttribute('role', 'button');
+    fig.dataset.album = p.album || '';
+    fig.dataset.i = idx;
+
+    var img = document.createElement('img');
+    img.loading = 'lazy';
+    img.decoding = 'async';
+    img.alt = p.caption || '';
+    img.src = p.src;
+    img.addEventListener('error', function () { fig.remove(); refreshFilters(); });
+    img.addEventListener('load', function () {
+      if (live.indexOf(p) === -1) { live.push(p); p._el = fig; }
+      refreshFilters();
+    });
+    fig.appendChild(img);
+
+    if (p.caption) {
+      var cap = document.createElement('figcaption');
+      cap.textContent = p.caption;
+      fig.appendChild(cap);
+    }
+    fig.addEventListener('click', function () { open(p); });
+    fig.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(p); }
+    });
+    grid.appendChild(fig);
+  });
+
+  /* album filter chips, built from whatever albums exist */
+  var filters = document.getElementById('filters');
+  var empty = document.getElementById('galEmpty');
+  function refreshFilters() {
+    empty.hidden = grid.children.length > 0;
+    var albums = [];
+    Array.prototype.forEach.call(grid.children, function (c) {
+      if (c.dataset.album && albums.indexOf(c.dataset.album) === -1) albums.push(c.dataset.album);
+    });
+    if (albums.length < 2) { filters.innerHTML = ''; return; }
+    if (filters.dataset.built === albums.join('|')) return;
+    filters.dataset.built = albums.join('|');
+    filters.innerHTML = '';
+    ['All'].concat(albums).forEach(function (name, i) {
+      var li = document.createElement('li');
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.textContent = name;
+      b.setAttribute('aria-pressed', i === 0 ? 'true' : 'false');
+      b.addEventListener('click', function () {
+        filters.querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-pressed', 'false'); });
+        b.setAttribute('aria-pressed', 'true');
+        Array.prototype.forEach.call(grid.children, function (c) {
+          c.style.display = (name === 'All' || c.dataset.album === name) ? '' : 'none';
+        });
+      });
+      li.appendChild(b);
+      filters.appendChild(li);
+    });
+  }
+  refreshFilters();
+
+  /* lightbox */
+  var lb = document.getElementById('lb'), lbImg = document.getElementById('lbImg'),
+      lbCap = document.getElementById('lbCap'), at = 0;
+  function shown() {
+    return live.filter(function (p) { return p._el && p._el.style.display !== 'none' && p._el.isConnected; });
+  }
+  function open(p) {
+    var s = shown(); at = Math.max(0, s.indexOf(p));
+    paint(s); lb.classList.add('on'); document.body.classList.add('locked');
+    document.getElementById('lbClose').focus();
+  }
+  function paint(s) {
+    s = s || shown(); if (!s.length) return;
+    var p = s[(at + s.length) % s.length];
+    lbImg.src = p.src; lbImg.alt = p.caption || '';
+    lbCap.textContent = (p.caption || '') + (p.album ? '  ·  ' + p.album : '');
+  }
+  function step(d) { var s = shown(); at = (at + d + s.length) % s.length; paint(s); }
+  function close() { lb.classList.remove('on'); document.body.classList.remove('locked'); lbImg.src = ''; }
+
+  document.getElementById('lbNext').addEventListener('click', function () { step(1); });
+  document.getElementById('lbPrev').addEventListener('click', function () { step(-1); });
+  document.getElementById('lbClose').addEventListener('click', close);
+  lb.addEventListener('click', function (e) { if (e.target === lb) close(); });
+  document.addEventListener('keydown', function (e) {
+    if (!lb.classList.contains('on')) return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'ArrowRight') step(1);
+    if (e.key === 'ArrowLeft') step(-1);
+  });
+
+  /* hide hero / collage images that don't exist yet */
+  document.querySelectorAll('.arch img, .tape img').forEach(function (img) {
+    img.addEventListener('error', function () { img.style.display = 'none'; });
+  });
+
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  var calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!calm && 'IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -10% 0px' });
+    document.querySelectorAll('.rise').forEach(function (el) { io.observe(el); });
+  } else {
+    document.querySelectorAll('.rise').forEach(function (el) { el.classList.add('in'); });
+  }
+})();
+</script>
+</body>
+</html>
